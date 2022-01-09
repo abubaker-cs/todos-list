@@ -4,6 +4,10 @@ import Header from "./Components/Header";
 import { Footer } from "./Components/Footer";
 
 function App() {
+  const onDelete = (todo) => {
+    console.log("I am onDelete of todo", todo);
+  };
+
   let todos = [
     {
       sno: 1,
@@ -35,7 +39,7 @@ function App() {
   return (
     <>
       <Header title="My Todos List" searchBar={false} />
-      <Todos todos={todos} />
+      <Todos todos={todos} onDelete={onDelete} />
       <Footer />
     </>
   );

@@ -2,13 +2,20 @@ import "./App.css";
 import { Todos } from "./Components/Todos";
 import Header from "./Components/Header";
 import { Footer } from "./Components/Footer";
+import React, { useState } from "react";
 
 function App() {
   const onDelete = (todo) => {
     console.log("I am onDelete of todo", todo);
+    setTodos(
+      todos.filter((e) => {
+        return e !== todo;
+      })
+    );
   };
 
-  let todos = [
+  // let todos =
+  const [todos, setTodos] = useState([
     {
       sno: 1,
       title: "Go to the market",
@@ -34,7 +41,7 @@ function App() {
       title: "Learn React.js basics",
       desc: "Spend at least 1 hour while understanding React.js fundamentals.",
     },
-  ];
+  ]);
 
   return (
     <>

@@ -4,11 +4,13 @@ import { TodoItem } from "./TodoItem";
 export const Todos = (props) => {
   return (
     <div className="container">
-      <h3 className="text-center my-3">Todos List</h3>
+      <hr />
+      <h3 className="text-center">Todos List</h3>
+      <hr />
 
-      {props.todos.length === 0 ? "No Todos to Display" : 
-      
-        props.todos.map((todo) => {
+      {props.todos.length === 0
+        ? "No Todos to Display"
+        : props.todos.map((todo) => {
             return (
               <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
             );

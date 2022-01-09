@@ -1,6 +1,7 @@
 import "./App.css";
 import { Todos } from "./Components/Todos";
 import Header from "./Components/Header";
+import { TodoAdd } from "./Components/TodoAdd";
 import { Footer } from "./Components/Footer";
 import React, { useState } from "react";
 
@@ -46,6 +47,7 @@ function App() {
   return (
     <>
       <Header title="My Todos List" searchBar={false} />
+      <TodoAdd />
       <Todos todos={todos} onDelete={onDelete} />
       <Footer />
     </>
@@ -53,3 +55,5 @@ function App() {
 }
 
 export default App;
+
+// Taking Break: https://youtu.be/RGKi6LSPDLU?t=5627

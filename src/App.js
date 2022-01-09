@@ -6,7 +6,7 @@ import { Footer } from "./Components/Footer";
 function App() {
   return (
     <>
-      <Header title="My Todos List" searchBar={true} />
+      <Header title="My Todos List" searchBar={false} />
       <Todos />
       <Footer />
     </>

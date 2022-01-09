@@ -45,7 +45,7 @@ export default function Header(props) {
               </button>
             </form>
           ) : (
-            "No Search bar"
+            "Search bar is disabled"
           )}
         </div>
       </div>
@@ -53,10 +53,14 @@ export default function Header(props) {
   );
 }
 
+// Default values of the variables
 Header.defaultProps = {
-  title: 'Your Title will appear here.'
+  title: 'Your Title will appear here.',
+  searchBar: true
 }
 
+// Define the Data-Types of variables being passed from the App.js
 Header.protoTypes = {
-  title: ProtoTypes.string
+  title: ProtoTypes.string,
+  searchBar: ProtoTypes.bool.isRequired
 }
